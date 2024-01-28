@@ -16,6 +16,9 @@
 		4A0A12712B66A4D000677420 /* DemoUseFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A12702B66A4D000677420 /* DemoUseFrameworkTests.swift */; };
 		4A0A127B2B66A4D000677420 /* DemoUseFrameworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A127A2B66A4D000677420 /* DemoUseFrameworkUITests.swift */; };
 		4A0A127D2B66A4D000677420 /* DemoUseFrameworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A127C2B66A4D000677420 /* DemoUseFrameworkUITestsLaunchTests.swift */; };
+		4A0A128D2B66A58F00677420 /* LoggerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0A128C2B66A58F00677420 /* LoggerKit.framework */; };
+		4A0A128E2B66A58F00677420 /* LoggerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0A128C2B66A58F00677420 /* LoggerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A0A12912B66A8BC00677420 /* LoggerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A12902B66A8BC00677420 /* LoggerWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4A0A128F2B66A58F00677420 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A0A128E2B66A58F00677420 /* LoggerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4A0A12562B66A4CE00677420 /* DemoUseFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoUseFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0A12592B66A4CE00677420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		4A0A12762B66A4D000677420 /* DemoUseFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUseFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0A127A2B66A4D000677420 /* DemoUseFrameworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUseFrameworkUITests.swift; sourceTree = "<group>"; };
 		4A0A127C2B66A4D000677420 /* DemoUseFrameworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUseFrameworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A0A128C2B66A58F00677420 /* LoggerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoggerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0A12902B66A8BC00677420 /* LoggerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0A128D2B66A58F00677420 /* LoggerKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,7 @@
 				4A0A126F2B66A4D000677420 /* DemoUseFrameworkTests */,
 				4A0A12792B66A4D000677420 /* DemoUseFrameworkUITests */,
 				4A0A12572B66A4CE00677420 /* Products */,
+				4A0A128B2B66A58F00677420 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +127,7 @@
 				4A0A12622B66A4D000677420 /* Assets.xcassets */,
 				4A0A12642B66A4D000677420 /* LaunchScreen.storyboard */,
 				4A0A12672B66A4D000677420 /* Info.plist */,
+				4A0A12902B66A8BC00677420 /* LoggerWrapper.swift */,
 			);
 			path = DemoUseFramework;
 			sourceTree = "<group>";
@@ -127,6 +149,14 @@
 			path = DemoUseFrameworkUITests;
 			sourceTree = "<group>";
 		};
+		4A0A128B2B66A58F00677420 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A0A128C2B66A58F00677420 /* LoggerKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +167,7 @@
 				4A0A12522B66A4CE00677420 /* Sources */,
 				4A0A12532B66A4CE00677420 /* Frameworks */,
 				4A0A12542B66A4CE00677420 /* Resources */,
+				4A0A128F2B66A58F00677420 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +292,7 @@
 				4A0A125E2B66A4CE00677420 /* ViewController.swift in Sources */,
 				4A0A125A2B66A4CE00677420 /* AppDelegate.swift in Sources */,
 				4A0A125C2B66A4CE00677420 /* SceneDelegate.swift in Sources */,
+				4A0A12912B66A8BC00677420 /* LoggerWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

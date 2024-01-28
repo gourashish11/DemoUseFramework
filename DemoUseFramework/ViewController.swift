@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import LoggerKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoggerWrapper().log("######")
         // Do any additional setup after loading the view.
     }
 
